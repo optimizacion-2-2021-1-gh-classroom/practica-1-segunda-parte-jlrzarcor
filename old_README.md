@@ -21,7 +21,7 @@ Dividir a su equipo para realizar tres tareas. **Ustedes deciden qué integrante
 
 2. 1 persona que apoye en la construcción de los *github workflows* (*build & push* y *tests*) y documentación del paquete.
 
-3. 1 persona que sea *project manager* (más detalles de este rol en las notas). Que apoye en la búsqueda de ejemplos y/o documentación para las tareas anteriores. Que cree el botón de *binder*. Que publique la documentación del paquete.
+3. 1 persona que sea *project manager* (más detalles de este rol en las notas). Que apoye en la búsqueda de ejemplos y/o documentación para las tareas anteriores. Que cree el botón de *binder*. Que publique la documentación del paquete *online*.
 
 Entre todos los y las integrantes tienen que dar *feedback* si es necesario en la resolución de las tareas que haya duda entre ustedes. El *feedback* consiste en resolver/explicar las dudas que existan. **Las personas asignadas a la tarea correspondiente son las que realizan los *commits* una vez resueltas las dudas**.
 
