@@ -7,12 +7,12 @@
 **Equipo 5.**
 ______
 
-| Github User  | Actividad a realizar  |
-|:------------:|:---------------------:|
-| @carlosrlpzi | 1 Por definir         |
-| @lgarayva    | 1 Por definir         |
-| @lobolc      | 1 Por definir         |
-| @ZarCorvus   | 1                     |
+| Github User  | Actividad a realizar                                                       |
+|:------------:|:--------------------------------------------------------------------------:|
+| @carlosrlpzi | 1. Programar el método numérico y seleccionar los ejemplos para los tests. |
+| @lgarayva    | 1. Programar el método numérico y seleccionar los ejemplos para los tests. |
+| @lobolc      | 2. Construir github workflows (build & push y tests) y documentar paquete. |
+| @ZarCorvus   | 3. _Project Manager_. Búsqueda de ejemplos y documentación para las tareas. Crear botón de binder. Publiar documentación del paquete online. |
 
 ______
 
