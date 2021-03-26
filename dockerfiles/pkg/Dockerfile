@@ -17,11 +17,13 @@ RUN echo 'miuser ALL=(ALL:ALL) NOPASSWD:ALL' | (EDITOR='tee -a' visudo)
 RUN echo 'miuser:qwerty' | chpasswd
 RUN pip3 install jupyter jupyterlab==$JUPYTERLAB_VERSION --upgrade
 
-#Github proyect
-RUN git clone https://github.com/optimizacion-2-2021-1-gh-classroom/practica-1-segunda-parte-jlrzarcor.git
-#COPY OA_logreg/requirements.txt requirements.txt
 
 USER miuser
+#Github proyect
+#RUN git clone https://github.com/optimizacion-2-2021-1-gh-classroom/practica-1-segunda-parte-jlrzarcor.git
+#COPY OA_logreg/requirements.txt requirements.txt
+
+
 #COPY requirements.txt .
 COPY ./requirements.txt .
 RUN pip3 install --requirement requirements.txt
