@@ -19,7 +19,7 @@ RUN pip3 install jupyter jupyterlab==$JUPYTERLAB_VERSION --upgrade
 
 #Github proyect
 RUN git clone https://github.com/optimizacion-2-2021-1-gh-classroom/practica-1-segunda-parte-jlrzarcor.git OA_logreg
-COPY OA_logreg/requirements.txt
+COPY OA_logreg/requirements.txt requirements.txt
 RUN pip3 install -r OA_logreg/requirements.txt  
 
 USER miuser
