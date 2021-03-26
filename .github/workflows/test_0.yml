@@ -1,3 +1,4 @@
+name: Proyect test
 on:
   push:
     branches:
