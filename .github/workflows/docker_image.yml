@@ -39,4 +39,4 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: lgarayv/pkg:0.1
-© 2021 GitHub, Inc.
+#© 2021 GitHub, Inc.
