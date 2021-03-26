@@ -33,11 +33,13 @@ COPY requirements.txt .
 #RUN cat requirements.txt  
 #RUN pip3 install numpy==1.19.5 pandas==1.2.0 scipy==1.6.0 cvxpy==1.1.7 sklearn pytest==6.2.1 
 RUN pip3 install pytest==6.2.1 
-RUN pip3 install numpy==1.19.5
+RUN pip3 install numpy
 RUN pip3 install pandas
-RUN pip3 install scipy==1.6.0 
-RUN pip3 install cvxpy==1.1.7
+RUN pip3 install scipy
+RUN pip3 install cvxpy
 RUN pip3 install sklearn
+
+
 
 RUN jupyter notebook --generate-config && sed -i "s/#c.NotebookApp.password = .*/c.NotebookApp.password = u'sha1:115e429a919f:21911277af52f3e7a8b59380804140d9ef3e2380'/" /home/miuser/.jupyter/jupyter_notebook_config.py
 ENTRYPOINT ["/usr/local/bin/jupyter", "lab", "--ip=0.0.0.0", "--no-browser"]
