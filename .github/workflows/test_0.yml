@@ -20,5 +20,5 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt && pytest test/unit
       - name: Test with pytest
-        run: pytest -vv
+        run: pytest
       
