@@ -18,7 +18,7 @@ RUN echo 'miuser:qwerty' | chpasswd
 RUN pip3 install jupyter jupyterlab==$JUPYTERLAB_VERSION --upgrade
 
 #Github proyect
-RUN git clone https://github.com/optimizacion-2-2021-1-gh-classroom/practica-1-segunda-parte-jlrzarcor.git OA_logreg
+RUN git clone https://github.com/optimizacion-2-2021-1-gh-classroom/practica-1-segunda-parte-jlrzarcor.git
 #COPY OA_logreg/requirements.txt requirements.txt
 COPY COPY requirements.txt .
 RUN pip3 install -r requirements.txt  
