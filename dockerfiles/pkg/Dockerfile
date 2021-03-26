@@ -22,7 +22,7 @@ RUN git clone https://github.com/optimizacion-2-2021-1-gh-classroom/practica-1-s
 #COPY OA_logreg/requirements.txt requirements.txt
 #COPY requirements.txt requirements.txt  
 
-COPY --from=intermediate /practica-1-segunda-parte-jlrzarcor/requirements.txt requirements.txt
+COPY --from=intermediate ./practica-1-segunda-parte-jlrzarcor/requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt  
 
 USER miuser
