@@ -25,7 +25,7 @@ USER miuser
 
 
 #COPY requirements.txt .
-COPY ./requirements.txt .
+COPY requirements.txt .
 RUN pip3 install --requirement requirements.txt
 #COPY . /tmp/
 #COPY --from=intermediate ./practica-1-segunda-parte-jlrzarcor/requirements.txt requirements.txt
