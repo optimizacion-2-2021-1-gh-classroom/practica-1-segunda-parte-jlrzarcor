@@ -12,16 +12,14 @@ ______
 | @carlosrlpzi | 1. Programar el método numérico y seleccionar los ejemplos para los tests. |
 | @lgarayva    | 1. Programar el método numérico y seleccionar los ejemplos para los tests. |
 | @lobolc      | 2. Construir github workflows (build & push y tests) y documentar paquete. |
-| @ZarCorvus   | 3. _Project Manager_. Búsqueda de ejemplos y documentación para las tareas. Crear botón de binder. Publiar documentación del paquete online. |
+| @ZarCorvus   | 3. _Project Manager_. Búsqueda de ejemplos y documentación para las tareas. Crear botón de binder. Publicar documentación del paquete online. |
 
 ______
 
-Testing binder:
+Para una experiencia interactiva con el código de nuestro repositorio, puedes utilizar el botón [binder](https://mybinder.org/)
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/optimizacion-2-2021-1-gh-classroom/practica-1-segunda-parte-jlrzarcor.git/main)
 
-.. image:: https://mybinder.org/badge_logo.svg
- :target: https://mybinder.org/v2/gh/optimizacion-2-2021-1-gh-classroom / practica-1-segunda-parte-jlrzarcor/HEAD
 ______
 
 ** Estructura de la información:**
