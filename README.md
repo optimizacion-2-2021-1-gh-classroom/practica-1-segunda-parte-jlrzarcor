@@ -16,6 +16,13 @@ ______
 
 ______
 
+Testing binder:
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/optimizacion-2-2021-1-gh-classroom / practica-1-segunda-parte-jlrzarcor/HEAD)
+.. image:: https://mybinder.org/badge_logo.svg
+ :target: https://mybinder.org/v2/gh/optimizacion-2-2021-1-gh-classroom / practica-1-segunda-parte-jlrzarcor/HEAD
+______
+
 ** Estructura de la información:**
 * Por definir
 
