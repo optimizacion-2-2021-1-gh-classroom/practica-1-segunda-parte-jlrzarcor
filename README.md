@@ -18,7 +18,8 @@ ______
 
 Testing binder:
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/optimizacion-2-2021-1-gh-classroom / practica-1-segunda-parte-jlrzarcor/HEAD)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/optimizacion-2-2021-1-gh-classroom/practica-1-segunda-parte-jlrzarcor.git/main)
+
 .. image:: https://mybinder.org/badge_logo.svg
  :target: https://mybinder.org/v2/gh/optimizacion-2-2021-1-gh-classroom / practica-1-segunda-parte-jlrzarcor/HEAD
 ______
