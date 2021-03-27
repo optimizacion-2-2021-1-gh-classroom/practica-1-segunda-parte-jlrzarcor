@@ -30,6 +30,9 @@ RUN pip3 install numpy pandas
 COPY requirements.txt .
 RUN pip3 install -r requirements.txt
 
+#Nuestro paquete
+RUN pip3 install reglog
+
 #COPY . /tmp/
 #COPY --from=intermediate ./practica-1-segunda-parte-jlrzarcor/requirements.txt requirements.txt
 #RUN pip3 install -r requirements.txt  
