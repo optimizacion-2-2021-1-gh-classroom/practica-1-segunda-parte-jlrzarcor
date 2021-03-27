@@ -80,3 +80,14 @@ def cgm(A,b,x):
 
 
     if x
+    
+ def symmetrize(n):
+    """
+    input:
+        n: size of the symmetric matrix required 
+    optput:
+        symetric matix
+    """
+    a = np.random.randint(10, size=(n,n))    
+    
+    return a + a.T - np.diag(a.diagonal())
