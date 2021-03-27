@@ -24,7 +24,7 @@ ______
 
 Puedes visitar nuestro sitio para conocer la documentación del paquete en línea:
 
-(opt_grad_desc)[https://optimizacion-2-2021-1-gh-classroom.github.io/practica-1-segunda-parte-jlrzarcor/]
+[opt_grad_desc](https://optimizacion-2-2021-1-gh-classroom.github.io/practica-1-segunda-parte-jlrzarcor/)
 ______
 
 ** Estructura de la información:**
