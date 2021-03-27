@@ -3,7 +3,7 @@
 
 import numpy as np
 import scipy
-from   sklearn import preprocessing 
+from   sklearn import preprocessing
 
 #Definición de matriz simétrica
 import numpy as np
@@ -18,6 +18,7 @@ def its_simetric(matrix, order):
         order: the number of raws in the matix
 
     outputs:
+        True ir our matrix is simetric, false otherwise
 
 
     """
@@ -48,15 +49,19 @@ def is_pos_def(x):
 
 def cgm(A,b,x):
     """
-    A: matrix
-    b: vector
-    x: soluction vector
+    input:
+        A: Coeficient matrix
+        b: solution vector
+        x: vector to be optimize
+    output:
+        x: optimiza vector
+
     """
     r = np.dot(A,x)-b
     p = -r
     k = 0
-    
-    while True: 
+    order = A.shape[0]
+    while its_simetric(A) and is_pos_def(A, order):
         r_s = np.dot(np.transpose(r),r)
         alpha_k = r_s/np.dot(np.transpose(p),np.dot(A,p))
         
@@ -72,4 +77,6 @@ def cgm(A,b,x):
         if np.linalg.norm(r) < 1e-10:
             break    
     return x
-    
+
+
+    if x
