@@ -26,7 +26,7 @@ USER miuser
 
 #COPY requirements.txt .
 
-RUN pip3 install numpy==1.19.5 pandas==1.2.0
+RUN pip3 install numpy pandas
 COPY requirements.txt .
 RUN pip3 install -r requirements.txt
 #COPY . /tmp/
