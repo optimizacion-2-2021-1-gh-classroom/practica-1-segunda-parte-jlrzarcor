@@ -29,3 +29,220 @@ ______
 **Referencias:**
 
 * Por definir
+
+
+
+### Estructura de carpetas
+
+```
+.
+├── README.md
+├── dockerfiles
+│   ├── README.md
+│   └── pkg
+│       └── Dockerfile
+├── docs
+│   └── sphinx_doc
+│       ├── Makefile
+│       ├── _build
+│       │   ├── doctrees
+│       │   │   ├── contact.doctree
+│       │   │   ├── help.doctree
+│       │   │   ├── index.doctree
+│       │   │   ├── license.doctree
+│       │   │   ├── log_reg.doctree
+│       │   │   └── modules.doctree
+│       │   └── html
+│       │       ├── _sources
+│       │       │   ├── contact.rst.txt
+│       │       │   ├── crash_pai.rst.txt
+│       │       │   ├── ejemplo.rst.txt
+│       │       │   ├── help.rst.txt
+│       │       │   ├── index.rst.txt
+│       │       │   ├── license.rst.txt
+│       │       │   ├── log_reg.rst.txt
+│       │       │   ├── modules.rst.txt
+│       │       │   ├── simple_fire.rst.txt
+│       │       │   ├── test.rst.txt
+│       │       │   └── test_sample1.rst.txt
+│       │       ├── _static
+│       │       │   ├── alabaster.css
+│       │       │   ├── basic.css
+│       │       │   ├── css
+│       │       │   │   ├── badge_only.css
+│       │       │   │   ├── fonts
+│       │       │   │   │   ├── Roboto-Slab-Bold.woff
+│       │       │   │   │   ├── Roboto-Slab-Bold.woff2
+│       │       │   │   │   ├── Roboto-Slab-Regular.woff
+│       │       │   │   │   ├── Roboto-Slab-Regular.woff2
+│       │       │   │   │   ├── fontawesome-webfont.eot
+│       │       │   │   │   ├── fontawesome-webfont.svg
+│       │       │   │   │   ├── fontawesome-webfont.ttf
+│       │       │   │   │   ├── fontawesome-webfont.woff
+│       │       │   │   │   ├── fontawesome-webfont.woff2
+│       │       │   │   │   ├── lato-bold-italic.woff
+│       │       │   │   │   ├── lato-bold-italic.woff2
+│       │       │   │   │   ├── lato-bold.woff
+│       │       │   │   │   ├── lato-bold.woff2
+│       │       │   │   │   ├── lato-normal-italic.woff
+│       │       │   │   │   ├── lato-normal-italic.woff2
+│       │       │   │   │   ├── lato-normal.woff
+│       │       │   │   │   └── lato-normal.woff2
+│       │       │   │   └── theme.css
+│       │       │   ├── custom.css
+│       │       │   ├── doctools.js
+│       │       │   ├── documentation_options.js
+│       │       │   ├── file.png
+│       │       │   ├── jquery-3.5.1.js
+│       │       │   ├── jquery.js
+│       │       │   ├── js
+│       │       │   │   ├── badge_only.js
+│       │       │   │   ├── html5shiv-printshiv.min.js
+│       │       │   │   ├── html5shiv.min.js
+│       │       │   │   └── theme.js
+│       │       │   ├── language_data.js
+│       │       │   ├── minus.png
+│       │       │   ├── plus.png
+│       │       │   ├── pygments.css
+│       │       │   ├── searchtools.js
+│       │       │   ├── underscore-1.12.0.js
+│       │       │   └── underscore.js
+│       │       ├── contact.html
+│       │       ├── genindex.html
+│       │       ├── help.html
+│       │       ├── index.html
+│       │       ├── license.html
+│       │       ├── log_reg.html
+│       │       ├── modules.html
+│       │       ├── objects.inv
+│       │       ├── search.html
+│       │       ├── searchindex.js
+│       │       └── test.html
+│       ├── conf.py
+│       ├── contact.rst
+│       ├── help.rst
+│       ├── index.rst
+│       ├── license.rst
+│       ├── log_reg.rst
+│       ├── make.bat
+│       └── modules.rst
+├── images
+│   ├── aws_workscreen_1.jpg
+│   ├── aws_workscreen_2.jpg
+│   ├── docker1.png
+│   ├── docker2.png
+│   ├── docker3.png
+│   ├── docker4.png
+│   └── docker5.png
+├── instrucciones.ipynb
+├── notebooks
+│   ├── GDA.ipynb
+│   ├── LR_test.ipynb
+│   ├── datasets
+│   │   └── breast_cancer_wisconsin_(original)_dataset.txt
+│   └── reg_log_doc.ipynb
+├── oa_e5
+│   ├── __init__.py
+│   └── __pycache__
+│       └── __init__.cpython-37.pyc
+├── old_README.md
+├── references
+│   └── Documentation
+│       └── Uryasev-AlgorithmsOptimizationCVaR.pdf
+├── requirements.txt
+├── src
+│   ├── docs
+│   │   └── sphinx_doc
+│   │       ├── Makefile
+│   │       ├── _build
+│   │       │   ├── doctrees
+│   │       │   │   ├── contact.doctree
+│   │       │   │   ├── help.doctree
+│   │       │   │   ├── index.doctree
+│   │       │   │   ├── license.doctree
+│   │       │   │   ├── log_reg.doctree
+│   │       │   │   └── modules.doctree
+│   │       │   └── html
+│   │       │       ├── _sources
+│   │       │       │   ├── contact.rst.txt
+│   │       │       │   ├── crash_pai.rst.txt
+│   │       │       │   ├── ejemplo.rst.txt
+│   │       │       │   ├── help.rst.txt
+│   │       │       │   ├── index.rst.txt
+│   │       │       │   ├── license.rst.txt
+│   │       │       │   ├── log_reg.rst.txt
+│   │       │       │   ├── modules.rst.txt
+│   │       │       │   ├── simple_fire.rst.txt
+│   │       │       │   ├── test.rst.txt
+│   │       │       │   └── test_sample1.rst.txt
+│   │       │       ├── _static
+│   │       │       │   ├── alabaster.css
+│   │       │       │   ├── basic.css
+│   │       │       │   ├── css
+│   │       │       │   │   ├── badge_only.css
+│   │       │       │   │   ├── fonts
+│   │       │       │   │   │   ├── Roboto-Slab-Bold.woff
+│   │       │       │   │   │   ├── Roboto-Slab-Bold.woff2
+│   │       │       │   │   │   ├── Roboto-Slab-Regular.woff
+│   │       │       │   │   │   ├── Roboto-Slab-Regular.woff2
+│   │       │       │   │   │   ├── fontawesome-webfont.eot
+│   │       │       │   │   │   ├── fontawesome-webfont.svg
+│   │       │       │   │   │   ├── fontawesome-webfont.ttf
+│   │       │       │   │   │   ├── fontawesome-webfont.woff
+│   │       │       │   │   │   ├── fontawesome-webfont.woff2
+│   │       │       │   │   │   ├── lato-bold-italic.woff
+│   │       │       │   │   │   ├── lato-bold-italic.woff2
+│   │       │       │   │   │   ├── lato-bold.woff
+│   │       │       │   │   │   ├── lato-bold.woff2
+│   │       │       │   │   │   ├── lato-normal-italic.woff
+│   │       │       │   │   │   ├── lato-normal-italic.woff2
+│   │       │       │   │   │   ├── lato-normal.woff
+│   │       │       │   │   │   └── lato-normal.woff2
+│   │       │       │   │   └── theme.css
+│   │       │       │   ├── custom.css
+│   │       │       │   ├── doctools.js
+│   │       │       │   ├── documentation_options.js
+│   │       │       │   ├── file.png
+│   │       │       │   ├── jquery-3.5.1.js
+│   │       │       │   ├── jquery.js
+│   │       │       │   ├── js
+│   │       │       │   │   ├── badge_only.js
+│   │       │       │   │   ├── html5shiv-printshiv.min.js
+│   │       │       │   │   ├── html5shiv.min.js
+│   │       │       │   │   └── theme.js
+│   │       │       │   ├── language_data.js
+│   │       │       │   ├── minus.png
+│   │       │       │   ├── plus.png
+│   │       │       │   ├── pygments.css
+│   │       │       │   ├── searchtools.js
+│   │       │       │   ├── underscore-1.12.0.js
+│   │       │       │   └── underscore.js
+│   │       │       ├── contact.html
+│   │       │       ├── genindex.html
+│   │       │       ├── help.html
+│   │       │       ├── index.html
+│   │       │       ├── license.html
+│   │       │       ├── log_reg.html
+│   │       │       ├── modules.html
+│   │       │       ├── objects.inv
+│   │       │       ├── search.html
+│   │       │       ├── searchindex.js
+│   │       │       └── test.html
+│   │       ├── conf.py
+│   │       ├── contact.rst
+│   │       ├── help.rst
+│   │       ├── index.rst
+│   │       ├── license.rst
+│   │       ├── log_reg.rst
+│   │       ├── make.bat
+│   │       └── modules.rst
+│   ├── lg_tools.py
+│   ├── log_reg.py
+│   └── utils.py
+├── test
+│   ├── __init__.py
+│   ├── test_0.py
+│   └── test_cgm.py
+└── tools
+
+```
