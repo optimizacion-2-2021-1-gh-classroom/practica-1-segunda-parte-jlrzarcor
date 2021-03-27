@@ -5,25 +5,21 @@ import numpy as np
 import scipy
 from   sklearn import preprocessing
 
-#Definición de matriz simétrica
-import numpy as np
-from numpy import linalg as LA
 
 def cgm(A,b,x):
-     """
+    """
     input:
-        A: Coeficient matrix
-        b: solution vector
-        x: vector to be optimize
-    output:
-        x: optimiza vector
+            A: Coeficient matrix
+            b: solution vector
+            x: vector to be optimize
+        output:
+            x: optimiza vector
     """
     r = np.dot(A,x)-b
     p = -r
     k = 0
     
     while True: 
-
         r_s = np.dot(np.transpose(r),r)
         alpha_k = r_s/np.dot(np.transpose(p),np.dot(A,p))
         
@@ -36,12 +32,12 @@ def cgm(A,b,x):
         p = -r + beta*p
         
         k = k+1
-        #print(x)
         if np.linalg.norm(r) < 1e-10:
             break
-    
+        if k > 10:
+            break    
     return x
-    
+        
 
 # Definición de matriz simétrica
 def its_simetric(matrix, order):
