@@ -6,15 +6,46 @@ import scipy
 from   sklearn import preprocessing 
 
 #Definición de matriz simétrica
-def es_simetrica(matriz,orden):
-    simetrica=True
-    for i in range (orden):
-        for j in range (orden):
-            if (matriz[i][j]!=matriz[j][i]):
-                simetrica=False
-    return simetrica
-   
-   
+import numpy as np
+from numpy import linalg as LA
+
+
+# Definición de matriz simétrica
+def its_simetric(matrix, order):
+    """
+    inputs:
+        matrix: a cuadratic matix
+        order: the number of raws in the matix
+
+    outputs:
+
+
+    """
+    simetrica = True
+    for i in range(orden):
+        for j in range(orden):
+            if (matriz[i][j] != matriz[j][i]):
+                simetric = False
+    return simetric
+
+
+def is_pos_def(x):
+    """
+
+    input:
+        param x: matrix to check if it  is define positive
+
+        return: True if the matix is define positive and False otherwise
+
+
+
+        Checks if a matix is define positive to know the problem is being solve
+        is convex and can be treated by the cojugate gradiant method.
+
+    """
+    return np.all(np.linalg.eigvals(x) > 0)
+
+
 def cgm(A,b,x):
     """
     A: matrix
