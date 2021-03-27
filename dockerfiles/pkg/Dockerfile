@@ -34,6 +34,7 @@ RUN pip3 install --requirement requirements.txt
 #RUN pip3 install numpy==1.19.5 pandas==1.2.0 scipy==1.6.0 cvxpy==1.1.7 sklearn pytest==6.2.1 
 
 
+
 #RUN pip3 install pytest==6.2.1 
 #RUN pip3 install numpy
 #RUN pip3 install pandas
