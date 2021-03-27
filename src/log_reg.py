@@ -20,7 +20,7 @@ class LogisticRegression:
             tot += (y * r_log(z) - (1 - y) * r_log(1 - z)) + (-1 / y.shape[0])
             return tot
 
-    def optimize(self, x, y, iterations, lr):
+    def optimize(self, x, y, sel.iterations, self.lr):
         """
         :param x:
         :param y:
