@@ -37,10 +37,10 @@ def cgm(A,b,x):
         if k > 10:
             break    
     return x
-        
+
 
 # Definición de matriz simétrica
-def its_simetric(matrix, order):
+def its_simetric_o(matrix, order):
     """
     inputs:
         matrix: a cuadratic matix
@@ -56,15 +56,16 @@ def its_simetric(matrix, order):
     return simetric
 
 
-def is_pos_def(x):
+def its_simetric(matrix):
     """
-    input:
-        param x: matrix to check if it  is define positive
-        return: True if the matix is define positive and False otherwise
-        Checks if a matix is define positive to know the problem is being solve
-        is convex and can be treated by the cojugate gradiant method.
+    inputs:
+        matrix: a cuadratic matix
+    outputs:
+        True ir our matrix is simetric, false otherwise
     """
-    return np.all(np.linalg.eigvals(x) > 0)
+    matrix_t = np.transpose(matrix)
+    return matrix.all() == matrix_t.all()
+
 
 def symmetrize(n):
     """
@@ -77,3 +78,14 @@ def symmetrize(n):
     a = np.random.randint(10, size=(n,n))
 
     return a + a.T - np.diag(a.diagonal())
+
+def is_pos_def(x):
+    """
+    input:
+        param x: matrix to check if it  is define positive
+        return: True if the matix is define positive and False otherwise
+        Checks if a matix is define positive to know the problem is being solve
+        is convex and can be treated by the cojugate gradiant method.
+    """
+    return np.all(np.linalg.eigvals(x) > 0)
+
