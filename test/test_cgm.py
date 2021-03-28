@@ -3,7 +3,7 @@ import numpy as np
 import os
 
 os.chdir("../")
-import oa_e5 as oa
+import src.oae5.functions as oa
 
 a = np.array([[3, 2, -1], [2, -1, 1], [-1, 1, -1]])
 b = np.array([1, -2, 0])
