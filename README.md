@@ -1,6 +1,6 @@
 ## Parte 2 para la práctica 1 del curso de Optimización 2 2021-1: implementación de método numérico para resolver problemas de optimización convexa.
 
-* Data set: por definir
+
 
 **Profesor**: Erick Palacios Moreno
 
@@ -16,6 +16,10 @@ ______
 
 ______
 
+Para esta segunda parte decidimos desarrollar un algoritmo para resolver el método del grdiante conjugado. Este es un método se usa comúnmente para resolver sistemas de ecuaciones lineales de gran tamaño . Para este método es necesario que la matriz a resolver sean square y  definidas positivas.
+
+______
+
 Para una experiencia interactiva con el código de nuestro repositorio, puedes utilizar el botón [binder](https://mybinder.org/):
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/optimizacion-2-2021-1-gh-classroom/practica-1-segunda-parte-jlrzarcor.git/main)
@@ -25,15 +29,11 @@ ______
 Puedes visitar nuestro sitio para conocer la documentación del paquete en línea:
 
 [opt_grad_desc](https://optimizacion-2-2021-1-gh-classroom.github.io/practica-1-segunda-parte-jlrzarcor/)
-______
-
-** Estructura de la información:**
-* Por definir
 
 ______
 **Referencias:**
 
-* Por definir
+An Introduction to the Conjugate Gradient Method Without the Agonizing Pain, Jonathan Richard Shewchuk, August 4, 1994
 
 
 
