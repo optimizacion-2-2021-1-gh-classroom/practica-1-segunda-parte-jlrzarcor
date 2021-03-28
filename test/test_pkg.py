@@ -26,3 +26,7 @@ def test_symmetrize():
     
 def test_is_pos_def():
     assert oa.is_pos_def(i3)
+
+def test_symmetrize_posdef():
+    t_spd = symmetrize_posdef(3)
+    assert oa.its_simetric(t_spd) and oa.is_pos_def(t_spd)
