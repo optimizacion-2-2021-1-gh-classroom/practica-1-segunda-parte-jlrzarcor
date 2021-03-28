@@ -66,3 +66,14 @@ def is_pos_def(x):
     """
     return np.all(np.linalg.eigvals(x) > 0)
 
+def symmetrize(n):
+    """
+    input:
+        n: size of the symmetric matrix required 
+    optput:
+        symetric matix
+    """
+    
+    a = np.random.randint(10, size=(n,n))
+
+    return a + a.T - np.diag(a.diagonal())
