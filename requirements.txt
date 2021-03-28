@@ -1,0 +1,4 @@
+scipy
+cvxpy
+scikit-learn
+pytest

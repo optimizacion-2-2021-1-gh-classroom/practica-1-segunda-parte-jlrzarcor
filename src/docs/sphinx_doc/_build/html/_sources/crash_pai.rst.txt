@@ -1,0 +1,7 @@
+crash\_pai module
+=================
+
+.. automodule:: crash_pai
+   :members:
+   :undoc-members:
+   :show-inheritance:

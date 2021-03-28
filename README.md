@@ -1,85 +1,253 @@
-**Parte 2 para la práctica 1 del curso de Optimización 2 2021-1: implementación de método numérico para resolver problemas de optimización convexa.**
-
-Antes de iniciar a trabajar: 
+## Parte 2 para la práctica 1 del curso de Optimización 2 2021-1: implementación de método numérico para resolver problemas de optimización convexa.
 
 
-* **Sólo una persona de cada equipo debe darle click a la liga** que está indicada en la publicación del *google classroom*. Una vez que le dé click a la liga tal persona **invite** a sus integrantes de su equipo como **Admin**. Para invitar a su integrante ir dentro del repo a Settings -> Manage Access y enviar la invitación ingresando user de github de su integrante.
 
-* **Su primer *commit* debe ser para renombrar este archivo `README.md` por `old_README.md` para que guarden su contenido y crear otro `README.md` donde me escriban la división de su equipo en una tabla que contenga en una columna *user* de github y en otra columna la tarea a realizar por tal persona (más detalles sobre las tareas en dinámica)**.    
-    
+**Profesor**: Erick Palacios Moreno
 
-# Instrucciones
+**Equipo 5.**
+______
 
-Se encuentran en el archivo [instrucciones.ipynb](instrucciones.ipynb).
+| Github User  | Actividad a realizar                                                       |
+|:------------:|:--------------------------------------------------------------------------:|
+| @carlosrlpzi | 1. Programar el método numérico y seleccionar los ejemplos para los tests. |
+| @lobolc      | 1. Programar el método numérico y seleccionar los ejemplos para los tests. |
+| @lgarayva    | 2. Construir github workflows (build & push y tests) y documentar paquete. |
+| @ZarCorvus   | 3. _Project Manager_. Búsqueda de ejemplos y documentación para las tareas. Crear botón de binder. Publicar documentación del paquete online. |
+
+______
+
+Para esta segunda parte decidimos desarrollar un algoritmo para resolver el método del grdiante conjugado. Este es un método se usa comúnmente para resolver sistemas de ecuaciones lineales de gran tamaño . Para este método es necesario que la matriz a resolver sean square y  definidas positivas.
+
+______
+
+Para una experiencia interactiva con el código de nuestro repositorio, puedes utilizar el botón [binder](https://mybinder.org/):
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/optimizacion-2-2021-1-gh-classroom/practica-1-segunda-parte-jlrzarcor.git/main)
+
+______
+
+Puedes visitar nuestro sitio para conocer la documentación del paquete en línea:
+
+[opt_grad_desc](https://optimizacion-2-2021-1-gh-classroom.github.io/practica-1-segunda-parte-jlrzarcor/)
+
+______
+**Referencias:**
+
+An Introduction to the Conjugate Gradient Method Without the Agonizing Pain, Jonathan Richard Shewchuk, August 4, 1994
 
 
-# Dinámica
 
-Dividir a su equipo para realizar tres tareas. **Ustedes deciden qué integrante resuelve qué tarea**:
-
-1. 2 personas que programen el método numérico elegido y elijan los ejemplos para los *tests*.
-
-2. 1 persona que apoye en la construcción de los *github workflows* (*build & push* y *tests*) y documentación de *sphinx* del paquete.
-
-3. 1 persona que sea *project manager* (más detalles de este rol en las notas). Que apoye en la búsqueda de ejemplos y/o documentación para las tareas anteriores. Que cree el botón de *binder*. Que publique la documentación del paquete con *github pages*.
-
-Entre todos los y las integrantes tienen que dar *feedback* si es necesario en la resolución de las tareas que haya duda entre ustedes. El *feedback* consiste en resolver/explicar las dudas que existan. **Las personas asignadas a la tarea correspondiente son las que realizan los *commits* una vez resueltas las dudas**.
-
-Los puntos 1, 2 y 3 anteriores los realizan de forma iterativa hasta finalizar las tareas y que estén en acuerdo las y los integrantes de cada equipo con las soluciones.
-
-**Deben usar `git` para llevar la historia de cambios en la realización de sus notebooks o cualquier otro archivo y subirlos a sus repos. No se revisarán aquellos archivos que tengan un commit con todas las respuestas. El trabajo es incremental.**
-
-**Deben usar la funcionalidad de github**: *issues*, *milestones*, *projects*, *reviewers*, *asignees* o lo que ustedes consideren de github que les ayudará a comunicarse/organizarse (no tienen que usar todas las funcionalidades anteriores y cada equipo decide qué usar). Ver por [ejemplo video para crear proyectos en github](https://youtu.be/z4Xpif7HI04).
-
-# Lenguajes de programación
-
-Ustedes eligen el lenguaje de programación a usar.
-
-# Calificación
-
-La calificación de esta segunda parte es la mitad de la práctica 1. Se asgina una calificación individual por tarea asignada y una calificación por equipo. Se calificará de acuerdo a los *commits* realizados y a los avances que realizan en su trabajo incremental. 
-
-# AWS
-
-Adjunten *screenshots* en un directorio de su repo para mostrar su uso de AWS, debe aparecer en el *screenshot* su nombre, clave única u otra forma de identificar su trabajo. El trabajo en la nube consiste en probar las ejecuciones de su paquete.
-
-Usen las cuentas de *Educate* si no usan GPUs, si quieren usar GPUs envíenme un mensaje por gitter para usar la cuenta no de *Educate*.
-
-Todas las personas del equipo conocen cómo levantar, configurar instancias de AWS y desplegar servicios allí. Uds elijan a una persona que sea la encargada de realizar lo anterior.
-
-# Notas
-
-* **Para la entrega crear un archivo con nombre:** `reporte_equipo_<aquí colocar_número>_parte_2_practica_1.ipynb` y contiene ejecución del paquete para los ejemplos elegidos.
-
-* *Project manager*: es la persona más importante para el éxito del proyecto. Conoce el/los objetivo(s) a resolver, detalla las tareas que realizarán el grupo de programación y el grupo de revisión (creación de *tests* en nuestro caso), organiza y asigna a personas a ambos grupos, crea tarjetas en el [project board de github](https://help.github.com/en/github/managing-your-work-on-github/creating-a-project-board) y [milestones](https://help.github.com/en/github/managing-your-work-on-github/tracking-the-progress-of-your-work-with-milestones) para dar seguimiento a [issues](https://help.github.com/en/github/managing-your-work-on-github/creating-an-issue). Mantiene un contacto directo con el prof para dudas que tengan y para avisar en qué fase se encuentran. Les explica a su equipo de trabajo la correcta creación de *issues*, solución de los mismos y el uso de *milestones* y del *project board*.
-
-* La división de las tareas y roles está está inspirada en el *framework* [scrum](https://www.youtube.com/watch?v=b02ZkndLk1Y&feature=emb_logo) en un ambiente laboral real (y en esta práctica estamos super-simplificando tal *framework*).
-
-* Añadan referencias utilizadas para su trabajo en su `README.md`.
-
-* **Los commits deben tener un mensaje explicatorio, no hacer lo siguiente:**
+### Estructura de carpetas
 
 ```
-git commit -m "create 1" -i archivo1.txt
+.
+├── README.md
+├── dockerfiles
+│   ├── README.md
+│   └── pkg
+│       └── Dockerfile
+├── docs
+│   └── sphinx_doc
+│       ├── Makefile
+│       ├── _build
+│       │   ├── doctrees
+│       │   │   ├── contact.doctree
+│       │   │   ├── help.doctree
+│       │   │   ├── index.doctree
+│       │   │   ├── license.doctree
+│       │   │   ├── log_reg.doctree
+│       │   │   └── modules.doctree
+│       │   └── html
+│       │       ├── _sources
+│       │       │   ├── contact.rst.txt
+│       │       │   ├── crash_pai.rst.txt
+│       │       │   ├── ejemplo.rst.txt
+│       │       │   ├── help.rst.txt
+│       │       │   ├── index.rst.txt
+│       │       │   ├── license.rst.txt
+│       │       │   ├── log_reg.rst.txt
+│       │       │   ├── modules.rst.txt
+│       │       │   ├── simple_fire.rst.txt
+│       │       │   ├── test.rst.txt
+│       │       │   └── test_sample1.rst.txt
+│       │       ├── _static
+│       │       │   ├── alabaster.css
+│       │       │   ├── basic.css
+│       │       │   ├── css
+│       │       │   │   ├── badge_only.css
+│       │       │   │   ├── fonts
+│       │       │   │   │   ├── Roboto-Slab-Bold.woff
+│       │       │   │   │   ├── Roboto-Slab-Bold.woff2
+│       │       │   │   │   ├── Roboto-Slab-Regular.woff
+│       │       │   │   │   ├── Roboto-Slab-Regular.woff2
+│       │       │   │   │   ├── fontawesome-webfont.eot
+│       │       │   │   │   ├── fontawesome-webfont.svg
+│       │       │   │   │   ├── fontawesome-webfont.ttf
+│       │       │   │   │   ├── fontawesome-webfont.woff
+│       │       │   │   │   ├── fontawesome-webfont.woff2
+│       │       │   │   │   ├── lato-bold-italic.woff
+│       │       │   │   │   ├── lato-bold-italic.woff2
+│       │       │   │   │   ├── lato-bold.woff
+│       │       │   │   │   ├── lato-bold.woff2
+│       │       │   │   │   ├── lato-normal-italic.woff
+│       │       │   │   │   ├── lato-normal-italic.woff2
+│       │       │   │   │   ├── lato-normal.woff
+│       │       │   │   │   └── lato-normal.woff2
+│       │       │   │   └── theme.css
+│       │       │   ├── custom.css
+│       │       │   ├── doctools.js
+│       │       │   ├── documentation_options.js
+│       │       │   ├── file.png
+│       │       │   ├── jquery-3.5.1.js
+│       │       │   ├── jquery.js
+│       │       │   ├── js
+│       │       │   │   ├── badge_only.js
+│       │       │   │   ├── html5shiv-printshiv.min.js
+│       │       │   │   ├── html5shiv.min.js
+│       │       │   │   └── theme.js
+│       │       │   ├── language_data.js
+│       │       │   ├── minus.png
+│       │       │   ├── plus.png
+│       │       │   ├── pygments.css
+│       │       │   ├── searchtools.js
+│       │       │   ├── underscore-1.12.0.js
+│       │       │   └── underscore.js
+│       │       ├── contact.html
+│       │       ├── genindex.html
+│       │       ├── help.html
+│       │       ├── index.html
+│       │       ├── license.html
+│       │       ├── log_reg.html
+│       │       ├── modules.html
+│       │       ├── objects.inv
+│       │       ├── search.html
+│       │       ├── searchindex.js
+│       │       └── test.html
+│       ├── conf.py
+│       ├── contact.rst
+│       ├── help.rst
+│       ├── index.rst
+│       ├── license.rst
+│       ├── log_reg.rst
+│       ├── make.bat
+│       └── modules.rst
+├── images
+│   ├── aws_workscreen_1.jpg
+│   ├── aws_workscreen_2.jpg
+│   ├── docker1.png
+│   ├── docker2.png
+│   ├── docker3.png
+│   ├── docker4.png
+│   └── docker5.png
+├── instrucciones.ipynb
+├── notebooks
+│   ├── GDA.ipynb
+│   ├── LR_test.ipynb
+│   ├── datasets
+│   │   └── breast_cancer_wisconsin_(original)_dataset.txt
+│   └── reg_log_doc.ipynb
+├── oa_e5
+│   ├── __init__.py
+│   └── __pycache__
+│       └── __init__.cpython-37.pyc
+├── old_README.md
+├── references
+│   └── Documentation
+│       └── Uryasev-AlgorithmsOptimizationCVaR.pdf
+├── requirements.txt
+├── src
+│   ├── docs
+│   │   └── sphinx_doc
+│   │       ├── Makefile
+│   │       ├── _build
+│   │       │   ├── doctrees
+│   │       │   │   ├── contact.doctree
+│   │       │   │   ├── help.doctree
+│   │       │   │   ├── index.doctree
+│   │       │   │   ├── license.doctree
+│   │       │   │   ├── log_reg.doctree
+│   │       │   │   └── modules.doctree
+│   │       │   └── html
+│   │       │       ├── _sources
+│   │       │       │   ├── contact.rst.txt
+│   │       │       │   ├── crash_pai.rst.txt
+│   │       │       │   ├── ejemplo.rst.txt
+│   │       │       │   ├── help.rst.txt
+│   │       │       │   ├── index.rst.txt
+│   │       │       │   ├── license.rst.txt
+│   │       │       │   ├── log_reg.rst.txt
+│   │       │       │   ├── modules.rst.txt
+│   │       │       │   ├── simple_fire.rst.txt
+│   │       │       │   ├── test.rst.txt
+│   │       │       │   └── test_sample1.rst.txt
+│   │       │       ├── _static
+│   │       │       │   ├── alabaster.css
+│   │       │       │   ├── basic.css
+│   │       │       │   ├── css
+│   │       │       │   │   ├── badge_only.css
+│   │       │       │   │   ├── fonts
+│   │       │       │   │   │   ├── Roboto-Slab-Bold.woff
+│   │       │       │   │   │   ├── Roboto-Slab-Bold.woff2
+│   │       │       │   │   │   ├── Roboto-Slab-Regular.woff
+│   │       │       │   │   │   ├── Roboto-Slab-Regular.woff2
+│   │       │       │   │   │   ├── fontawesome-webfont.eot
+│   │       │       │   │   │   ├── fontawesome-webfont.svg
+│   │       │       │   │   │   ├── fontawesome-webfont.ttf
+│   │       │       │   │   │   ├── fontawesome-webfont.woff
+│   │       │       │   │   │   ├── fontawesome-webfont.woff2
+│   │       │       │   │   │   ├── lato-bold-italic.woff
+│   │       │       │   │   │   ├── lato-bold-italic.woff2
+│   │       │       │   │   │   ├── lato-bold.woff
+│   │       │       │   │   │   ├── lato-bold.woff2
+│   │       │       │   │   │   ├── lato-normal-italic.woff
+│   │       │       │   │   │   ├── lato-normal-italic.woff2
+│   │       │       │   │   │   ├── lato-normal.woff
+│   │       │       │   │   │   └── lato-normal.woff2
+│   │       │       │   │   └── theme.css
+│   │       │       │   ├── custom.css
+│   │       │       │   ├── doctools.js
+│   │       │       │   ├── documentation_options.js
+│   │       │       │   ├── file.png
+│   │       │       │   ├── jquery-3.5.1.js
+│   │       │       │   ├── jquery.js
+│   │       │       │   ├── js
+│   │       │       │   │   ├── badge_only.js
+│   │       │       │   │   ├── html5shiv-printshiv.min.js
+│   │       │       │   │   ├── html5shiv.min.js
+│   │       │       │   │   └── theme.js
+│   │       │       │   ├── language_data.js
+│   │       │       │   ├── minus.png
+│   │       │       │   ├── plus.png
+│   │       │       │   ├── pygments.css
+│   │       │       │   ├── searchtools.js
+│   │       │       │   ├── underscore-1.12.0.js
+│   │       │       │   └── underscore.js
+│   │       │       ├── contact.html
+│   │       │       ├── genindex.html
+│   │       │       ├── help.html
+│   │       │       ├── index.html
+│   │       │       ├── license.html
+│   │       │       ├── log_reg.html
+│   │       │       ├── modules.html
+│   │       │       ├── objects.inv
+│   │       │       ├── search.html
+│   │       │       ├── searchindex.js
+│   │       │       └── test.html
+│   │       ├── conf.py
+│   │       ├── contact.rst
+│   │       ├── help.rst
+│   │       ├── index.rst
+│   │       ├── license.rst
+│   │       ├── log_reg.rst
+│   │       ├── make.bat
+│   │       └── modules.rst
+│   ├── lg_tools.py
+│   ├── log_reg.py
+│   └── utils.py
+├── test
+│   ├── __init__.py
+│   ├── test_0.py
+│   └── test_cgm.py
+└── tools
 
-git commit -m "update 1" -i archivo1.txt #qué es update 1?
-
-git commit -m "update 2" -i archivo1.txt #qué es update 2?
-
-git commit -m "update 3" -i archivo1.txt #qué es update 3?
 ```
-
-**así también para los *issues*, *projects*, *milestones*...**
-
-* Esta organización es nuestro *playground* utilicen los repos de aquí para practicar :)
-
-* Recuerden:
-
-    * usar `git` para llevar la historia de sus cambios en sus repos :)
-    * poner las referencias que utilizan (aún si le preguntan a una compañera o compañero de la clase coloquen esto en su entrega) pues no está permitido copiar y escribir que lo hicieron sin citar sus fuentes.
-
-
-* Para dudas creen un *room* de gitter e ínvitenme :) (si ya lo hicieron omitan este enunciado)
-
-* **Su trabajo individual y su tiempo es muy valioso e importante, también el trabajo en equipo. Si alguna persona del equipo no realizó su tarea asignada, esperaría que lo resolvieran entre ustedes, si no lo resuelven avísenme y no realicen su tarea asignada. Si tienen algún problema (familiar, salud,...) infórmenme con tiempo para ver qué podemos hacer :)**
-
