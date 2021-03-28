@@ -1,7 +1,0 @@
-simple\_fire module
-===================
-
-.. automodule:: simple_fire
-   :members:
-   :undoc-members:
-   :show-inheritance:
