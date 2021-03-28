@@ -17,12 +17,12 @@ def test_cgm():
 
 
 def test_its_simetric():
-    assert its_simetric(a)
+    assert oa.its_simetric(a)
 
 
 def test_symmetrize():
     syn_mt = symmetrize(4)
-    assert its_simetric(syn_mt)
+    assert oa.its_simetric(syn_mt)
     
 def test_is_pos_def():
-    assert is_pos_def(i3)
+    assert oa.is_pos_def(i3)
