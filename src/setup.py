@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
-setup(name="mex",
-      version="0.1",
+setup(name="oae5",
+      version="0.1.4",
       description=u"Paquete para resolver método de gradiente conjugado",
       url="",
       author="eq_5",
