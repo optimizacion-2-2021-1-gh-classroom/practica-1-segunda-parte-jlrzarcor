@@ -31,7 +31,7 @@ COPY requirements.txt .
 RUN pip3 install -r requirements.txt
 
 #Nuestro paquete
-RUN pip3 install oae5==0.1.4
+RUN pip3 install oae5
 
 #COPY . /tmp/
 #COPY --from=intermediate ./practica-1-segunda-parte-jlrzarcor/requirements.txt requirements.txt
