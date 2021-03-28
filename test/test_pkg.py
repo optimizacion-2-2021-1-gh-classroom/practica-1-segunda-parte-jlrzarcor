@@ -21,7 +21,7 @@ def test_its_simetric():
 
 
 def test_symmetrize():
-    syn_mt = symmetrize(4)
+    syn_mt = oa.symmetrize(4)
     assert oa.its_simetric(syn_mt)
     
 def test_is_pos_def():
